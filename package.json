@@ -1,6 +1,6 @@
 {
   "name": "@moonwave99/keyfocus",
-  "version": "0.0.0-development",
+  "version": "0.0.1",
   "description": "Handle key events in React",
   "main": "./lib/index.js",
   "files": [
@@ -14,7 +14,7 @@
     "prepare": "husky install",
     "semantic-release": "semantic-release",
     "test:watch": "jest --watch",
-    "test": "jest --coverage",
+    "test": "jest --coverage --collectCoverageFrom='./src/**'",
     "typecheck": "tsc --noEmit"
   },
   "repository": {
@@ -45,11 +45,24 @@
     "url": "https://github.com/moonwave99/keyfocus/issues"
   },
   "homepage": "https://github.com/moonwave99/keyfocus#readme",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "devDependencies": {
     "@ryansonshine/commitizen": "^4.2.8",
     "@ryansonshine/cz-conventional-changelog": "^3.3.4",
+    "@testing-library/dom": "^9.3.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^27.5.2",
     "@types/node": "^12.20.11",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "conventional-changelog-conventionalcommits": "^5.0.0",

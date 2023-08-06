@@ -1,1 +1,4 @@
-export const myPackage = (taco = ''): string => `${taco} from my package`;
+import useKeyboard, { KeyboardProvider } from './KeyboardProvider';
+
+export default useKeyboard;
+export { KeyboardProvider };
