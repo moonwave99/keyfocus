@@ -11,8 +11,10 @@ function Box({ id, autoFocus = false }: { id: string; autoFocus?: boolean }) {
     handlers: {
       ArrowUp: () => setCount(count + 1),
       ArrowDown: () => setCount(count - 1),
-      'Shift+ArrowRight': () => setCount(count + 1),
-      'Shift+ArrowLeft': () => setCount(count - 1),
+      'shift+ArrowRight': () => setCount(count + 1),
+      'shift+ArrowLeft': () => setCount(count - 1),
+      'ctrl+ArrowLeft': () => setCount(count - 1),
+      'ctrl+c': () => void 0,
     },
   });
 

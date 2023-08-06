@@ -1,6 +1,6 @@
 {
   "name": "@moonwave99/keyfocus",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Handle key events in React",
   "main": "./lib/index.js",
   "files": [
