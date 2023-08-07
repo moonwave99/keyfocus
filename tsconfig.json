@@ -18,5 +18,11 @@
     "jsx": "react-jsx"
   },
   "types": ["node", "jest", "@testing-library/jest-dom"],
-  "include": [".eslintrc.js", "src/*.ts", "src/*.tsx", "support/setupTests.js"]
+  "include": [
+    ".eslintrc.js",
+    "src/*.ts",
+    "src/*.tsx",
+    "src/test/*.js",
+    "src/test/*.tsx"
+  ]
 }

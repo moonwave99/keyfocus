@@ -1,30 +1,7 @@
-import { useState } from 'react';
-import useKeyboard, { KeyboardProvider } from './index';
+import { KeyboardProvider } from './index';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-
-function Box({ id, autoFocus = false }: { id: string; autoFocus?: boolean }) {
-  const [count, setCount] = useState(0);
-  const { hasFocus } = useKeyboard({
-    id: `box-${id}`,
-    autoFocus,
-    handlers: {
-      ArrowUp: () => setCount(count + 1),
-      ArrowDown: () => setCount(count - 1),
-      'shift+ArrowRight': () => setCount(count + 1),
-      'shift+ArrowLeft': () => setCount(count - 1),
-      'ctrl+ArrowLeft': () => setCount(count - 1),
-      'ctrl+c': () => void 0,
-    },
-  });
-
-  return (
-    <div className={hasFocus ? 'box focused' : 'box'} data-testid={id}>
-      <h2>Box {id}</h2>
-      <p>Value: {count}</p>
-    </div>
-  );
-}
+import Box from './test/Box';
 
 describe('useKeyboard', () => {
   it('responds to key events if the element is focused', async () => {

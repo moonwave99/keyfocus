@@ -12,5 +12,5 @@ module.exports = {
       isolatedModules: true,
     },
   },
-  setupFilesAfterEnv: ['<rootDir>/support/setupTests.js'],
+  setupFilesAfterEnv: ['<rootDir>/src/test/setupTests.js'],
 };
