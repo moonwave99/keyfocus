@@ -12,6 +12,8 @@ describe('useKeyboard', () => {
     expect(screen.getByText('Value: 1')).toBeInTheDocument();
     await user.keyboard('{ArrowDown}');
     expect(screen.getByText('Value: 0')).toBeInTheDocument();
+    await user.keyboard('{ }');
+    expect(screen.getByText('Value: 10')).toBeInTheDocument();
   });
 
   it('does not respond to key events if the element is not focused', async () => {

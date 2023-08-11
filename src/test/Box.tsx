@@ -12,6 +12,7 @@ const Box: FC<IBoxProps> = ({ id, autoFocus = false }) => {
     id: `box-${id}`,
     autoFocus,
     handlers: {
+      Space: () => setCount(10),
       ArrowUp: () => setCount(count + 1),
       ArrowDown: () => setCount(count - 1),
       'shift+ArrowRight': () => setCount(count + 1),

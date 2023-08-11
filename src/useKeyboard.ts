@@ -76,7 +76,7 @@ export default function useKeyboard({
     const parsed = parseHandlers(handlers);
 
     function onKeyDown(event: KeyboardEvent) {
-      const matches = parsed.filter(x => x.key === event.key);
+      const matches = parsed.filter(x => x.key === event.code);
       if (!matches.length) {
         return;
       }
